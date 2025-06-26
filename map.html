@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script
+            src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=0cno71afap">
+    </script>
+</head>
+<body>
+<div id="map" style="width:100%;height:100%;"></div>
+<script>
+    function initMap(lat, lng) {
+      const mapOptions = {
+        center: new naver.maps.LatLng(lat, lng),
+        zoom: 15
+      };
+      const map = new naver.maps.Map('map', mapOptions);
+      new naver.maps.Marker({ position: mapOptions.center, map });
+    }
+  </script>
+</body>
+</html>
